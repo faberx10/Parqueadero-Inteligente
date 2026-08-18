@@ -48,3 +48,16 @@ Por ahora la carpeta está vacía, se arma en el paso 6 del plan. Cuando tengamo
 - [ ] Paso 6: Chatbot de voz + interfaz web
 - [ ] Paso 7: Maqueta física
 - [ ] Paso 8: Integración final
+## Evidencia del proyecto
+
+### Maqueta física
+![Maqueta](Evidencia/Maqueta.jpeg)
+![Maqueta detalle](Evidencia/Maqueta01.jpeg)
+
+### Interfaz web (VALET)
+![Interfaz web](Evidencia/Interfaz.jpeg)
+
+### Simulación en Wokwi
+![Simulación](Evidencia/Simulacion.jpeg)
+
+Puedes ver la simulación interactiva aquí: [Simulación Wokwi](https://wokwi.com/projects/472670969956004865)
