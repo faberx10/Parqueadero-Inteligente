@@ -199,7 +199,7 @@ El proyecto incluye una simulación en **Wokwi** que reproduce la lógica comple
 - Los 8 sensores FC-51 se reemplazan por **8 pulsadores** (Wokwi no dispone de un modelo de sensor IR FC-51 en su librería de componentes). Cada pulsador usa `INPUT_PULLUP`, replicando la misma lógica de detección activa en bajo del sensor real.
 - El ventilador y la luz inteligente se representan con **LEDs indicadores** en vez del MOSFET y la carga real, ya que Wokwi no incluye modelos de motor DC ni de MOSFET de potencia.
 
-🔗 **Simulación:** [PEGA_AQUI_TU_LINK_DE_WOKWI](PEGA_AQUI_TU_LINK_DE_WOKWI)
+🔗 **Simulación:** [Link](https://wokwi.com/projects/472670969956004865)
 
 Captura de la simulación: [`Evidencia/Simulacion.jpeg`](Evidencia/Simulacion.jpeg)
 
