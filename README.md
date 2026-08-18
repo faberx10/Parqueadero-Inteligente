@@ -232,7 +232,8 @@ Código fuente de la simulación disponible en [`wokwi/sketch.ino`](wokwi/sketch
 
 ## Autores
 
-Proyecto desarrollado para la asignatura de Microcontroladores — Ingeniería Mecatrónica, Universidad Militar Nueva Granada.
+Faber Alexander Rodriguez Hernandez
+David Felipe Farfan Quiroz
 
 ---
 
