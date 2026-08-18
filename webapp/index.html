@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VALET — Parqueadero Inteligente</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="scanlines"></div>
+
+  <header class="header">
+    <div class="header-left">
+      <div class="badge-numero">V</div>
+      <div class="header-titles">
+        <h1>VALET · PARQUEADERO INTELIGENTE</h1>
+        <p class="subtitulo">Panel de control · 8 cubículos · ESP32</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="conexion" id="estadoConexion">
+        <span class="conexion-dot"></span>
+        <span id="conexionTexto">Conectando…</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="panel">
+
+    <!-- Fila de metricas principales -->
+    <section class="metricas">
+      <div class="metrica-card metrica-libre">
+        <span class="metrica-label">ESPACIOS LIBRES</span>
+        <span class="metrica-valor" id="valorLibres">--</span>
+        <span class="metrica-de">de 8</span>
+      </div>
+
+      <div class="metrica-card metrica-ocupado">
+        <span class="metrica-label">CUPOS LLENOS</span>
+        <span class="metrica-valor" id="valorOcupados">--</span>
+        <span class="metrica-de" id="ocupadosNota">de 8</span>
+      </div>
+
+      <div class="metrica-card metrica-ventilador" id="cardVentilador">
+        <span class="metrica-label">REFRIGERACIÓN</span>
+        <span class="metrica-estado" id="estadoVentilador">--</span>
+        <span class="metrica-de" id="ventiladorNota">Se activa con 4+ carros</span>
+      </div>
+
+      <div class="metrica-card metrica-luz" id="cardLuz">
+        <span class="metrica-label">LUZ INTELIGENTE</span>
+        <span class="metrica-estado" id="estadoLuz">--</span>
+        <span class="metrica-de">Comando de voz</span>
+      </div>
+    </section>
+
+    <!-- Mapa de cubiculos -->
+    <section class="mapa-wrap">
+      <div class="mapa-header">
+        <h2>MAPA DE CUBÍCULOS</h2>
+        <div class="leyenda">
+          <span class="leyenda-item"><i class="dot dot-libre"></i>Libre</span>
+          <span class="leyenda-item"><i class="dot dot-reservado"></i>Reservado</span>
+          <span class="leyenda-item"><i class="dot dot-ocupado"></i>Ocupado</span>
+        </div>
+      </div>
+      <div class="mapa" id="mapaCubiculos">
+        <!-- generado por JS: 8 cubiculos -->
+      </div>
+      <p class="mapa-hint">Click en un cubículo libre para reservarlo. Click en uno reservado para cancelar.</p>
+    </section>
+
+    <!-- Chatbot de voz -->
+    <section class="voz-wrap">
+      <div class="voz-header">
+        <h2>ASISTENTE VALET</h2>
+        <p class="voz-hint">Di <strong>"Valet, enciende las luces"</strong>, <strong>"Valet, reserva el cubículo 3"</strong>, <strong>"Valet, reserva los cubículos 2, 4 y 6"</strong> o <strong>"Valet, reserva todos"</strong>. También funciona con "libera" en vez de "reserva".</p>
+      </div>
+
+      <div class="voz-panel">
+        <button id="btnMicrofono" class="btn-mic" aria-label="Activar micrófono">
+          <svg viewBox="0 0 24 24" fill="none" class="icono-mic">
+            <path d="M12 15a3 3 0 003-3V6a3 3 0 10-6 0v6a3 3 0 003 3z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M19 11a7 7 0 01-14 0M12 18v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span id="micLabel">Presiona para hablar</span>
+        </button>
+
+        <div class="voz-transcripcion">
+          <p class="transcripcion-label">Último comando reconocido</p>
+          <p class="transcripcion-texto" id="transcripcionTexto">—</p>
+        </div>
+      </div>
+
+      <div class="voz-log" id="vozLog">
+        <p class="log-vacio">El historial de comandos aparecerá aquí.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span id="footerIP">Sin conexión al ESP32</span>
+    <span class="footer-sep">·</span>
+    <span>Actualiza cada 2s</span>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
