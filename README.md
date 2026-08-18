@@ -232,7 +232,7 @@ Código fuente de la simulación disponible en [`wokwi/sketch.ino`](wokwi/sketch
 
 ## Autores
 
-Faber Alexander Rodriguez Hernandez
+Faber Alexander Rodriguez Hernandez ----
 David Felipe Farfan Quiroz
 
 ---
